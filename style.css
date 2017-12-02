@@ -1,0 +1,111 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	margin: auto;
+	width: 90%;
+	font-family: Arial, "Times New Roman";
+	background-color: #e5eaee;
+}
+@media screen and (min-width: 1300px){
+	.container{
+		max-width: 1200px;
+		width: 1200px;
+	}
+}
+.flexCont{
+	display: flex;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+
+/*____________HEADER__________*/
+header{
+	height: 60px;
+	padding: 5px;
+	background-color: #003680;
+	margin-bottom: 55px;
+	align-items: center;
+}
+header .logoCont{
+	margin-left: 30px;
+	width: 60px;
+}
+header .heading{
+	color: white;
+	vertical-align: center;
+	margin-left: 15px;
+}
+/*____________HEADER END__________*/
+
+/*_____________PICTURES + TEXT___________*/
+main .columns{
+	padding-left: 6%;
+	padding-right: 6%;
+	justify-content: space-between;
+	margin-top: 0;
+}
+main .columns .imgCont{
+	width: 40%;
+	box-shadow: 0 0 5px 1px;
+}
+main .columns .priceCont{
+	width: 40%;
+	justify-content: space-between;
+	background-color: white;
+	box-shadow: 0 0 5px 1px;
+}
+main .columns p{
+	margin: 3px;
+	text-shadow: 0 0 1px;
+}
+main .columns .textRight p{
+	text-align: right;
+}
+main .columns .city{
+	font-size: 22px;
+	color: #0593c8;
+	margin-bottom: 8px;
+}
+main .columns .avgPrice{
+	font-size: 22px;
+	color: #7d7d7d;
+	margin-bottom: 8px;
+}
+main .columns .country{
+	font-size: 18px;
+	color: #969696;
+}
+main .columns .priceText{
+	color: #afafaf;
+	font-size: 18px;
+}
+/*_____________PICTURES + TEXT END___________*/
+main .box{
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	padding-left: 6%;
+	padding-right: 6%;
+}
+main .box .textBox{
+	flex-direction: column;
+	align-items: center;
+	font-size: 21px;
+	margin-bottom: 30px;
+}
+main .box .priceBox{
+	border-radius: 10px;
+	color: white;
+	background-color: #21a6d3;
+	font-size: 40px;
+	font-weight: bold;
+	width: 15%;
+	min-width: 140px;
+	text-align: center;
+	padding: 6px;
+	margin-bottom: 30px;
+}

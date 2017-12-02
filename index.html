@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CodeReview2 Pascal Tonsern</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+<!-- __________HEADER__________ -->
+	<header class="flexCont">
+		<div class="logoCont">
+			<img src="image/cr2-logo.png">
+		</div>
+		<div class="heading">
+			<h1>Price comparison</h1>
+		</div>
+	</header>
+<!-- __________HEADER END__________ -->
+<!-- __________MAIN________________ -->
+	<main>
+	<!-- _______Pictures_________	 -->
+		<div class="flexCont columns">
+			<div class="imgCont"><img src="image/cr2-amsterdam.jpg"></div>		
+			<div class="imgCont"><img src="image/cr2-london.jpg"></div>		
+		</div>
+		<div class="flexCont columns">
+			<div class=" flexCont priceCont">
+				<div class="textLeft">
+					<p class="city">Amsterdam</p>
+					<p class="country">Netherlands</p>
+				</div>
+				<div class=textRight>
+					<p class="avgPrice" id="priceAmst"></p>
+					<p class="priceText">Average price</p>
+				</div>
+			</div>		
+			<div class=" flexCont priceCont">
+				<div class="textLeft">
+					<p class="city">London</p>
+					<p class="country">United Kingdom</p>
+				</div>
+				<div class=textRight>
+					<p class="avgPrice" id="priceLond"></p>
+					<p class="priceText">Average price</p>
+				</div>
+			</div>		
+		</div>
+	<!-- _______Pictures End_________	 -->
+	<!-- __________Foot__________ -->
+		<div class="flexCont box">
+			<div class="flexCont textBox">
+				<p><b>Amsterdam</b> will be more affordable than <b>London</b> for the New Year's celebration</p>
+				<p>Difference in price</p>
+			</div>
+			<div class="priceBox">
+				<p id="difference"></p>
+			</div>
+		</div>
+		<!-- __________Foot End__________ -->
+	</main>
+<!-- __________MAIN END_______________ -->
+</div>
+
+
+<script type="text/javascript">
+	var amsterdam = [1500, 500, 1800, 700]
+	var london = [2500, 1500, 1000, 900]
+
+	var price= document.getElementById("priceAmst");
+	price.innerHTML= calcAvg(amsterdam);
+
+	var price= document.getElementById("priceLond");
+	price.innerHTML= calcAvg(london);
+
+	var diff= document.getElementById("difference");
+	diff.innerHTML= calcAvg(london)- calcAvg(amsterdam)+"€";
+
+
+	function calcAvg(a){
+		avg = (a[0]+a[1]+a[2]+a[3])/4
+		return avg;		
+	}
+</script>
+</body>
+</html>
